@@ -22,3 +22,6 @@ class DMUser(commands.Cog):
 
         except:
             await ctx.channel.send("Couldn't dm the given user.")
+
+def setup(bot):
+    bot.add_cog(DMUserPlugin(bot))
