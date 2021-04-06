@@ -19,10 +19,7 @@ class DMUserPlugin(commands.Cog):
         except:
             await ctx.channel.send("Couldn't dm the given user.")
 
-    @commands.Cog.listener()
-    async def on_ready(self):
-        async with self.bot.session.post("https://counter.modmail-plugins.ionadev.ml/api/instances/announcement", json={'id': self.bot.user.id}):
-            print("Posted to Plugin API")
+
 
 
 
