@@ -4,7 +4,7 @@ from discord.ext import commands
 from core import checks
 from core.models import PermissionLevel
 
-class DMUser(commands.Cog): 
+class dmuser(commands.Cog): 
     """DMs a user a message"""
     
     def __init__(self, bot):
@@ -24,4 +24,4 @@ class DMUser(commands.Cog):
             await ctx.channel.send("Couldn't dm the given user.")
 
 def setup(bot):
-    bot.add_cog(dmuserplugin(bot))
+    bot.add_cog(dmuser(bot))
